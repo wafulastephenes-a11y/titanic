@@ -36,7 +36,7 @@ input_data=pd.DataFrame([{
 
 if st.button('Predict Survival'):
     input_data_scaled=scaler.transform(input_data)
-    prediction=model.predict('input_data_scaled')
+    prediction=model.predict(input_data_scaled)
     result='Survived' if prediction[0]==1 else 'did not survive'
     st.success(f'The passenger would have: {result}')
 
