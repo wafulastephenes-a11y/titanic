@@ -11,7 +11,7 @@ sex_encoder=joblib.load('encoder.pkl')
 st.title('Titanic survival prediction')
 st.write('Enter details of the passenger')
 
-pclass=st.selectbox('Passenger Class(1=1st,2=2nd,3=3rd)', [1,2,3])
+pclass=st.selectbox('Passenger Class(1=First, 2=Second, 3=Third)', [1,2,3])
 sex=st.selectbox('Sex',sex_encoder.classes_)
 age=st.number_input('age',0,100,30)
 fare=st.number_input('fare',0.0,600.0,40.0)
